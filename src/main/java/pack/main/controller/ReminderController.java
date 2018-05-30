@@ -13,6 +13,6 @@ public class ReminderController {
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     @ResponseBody
     public String getReminder() {
-        return "remind";
+        return "Remind me";
     }
 }
