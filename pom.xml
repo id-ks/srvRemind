@@ -7,6 +7,17 @@
     <groupId>srvRemind</groupId>
     <artifactId>srvRemind</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <spring.version>5.0.6.RELEASE</spring.version>
+        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <spring-data-jpa.version>1.11.12.RELEASE</spring-data-jpa.version>
+        <hibernate-entitymanager.version>5.3.1.Final</hibernate-entitymanager.version>
+        <postgresql.version>42.2.2</postgresql.version>
+        <commons-dbcp2.version>2.3.0</commons-dbcp2.version>
+        <jta.version>1.1</jta.version>
+        <jackson-databind.version>2.9.5</jackson-databind.version>
+    </properties>
     <packaging>war</packaging>
 
     <dependencies>
@@ -15,22 +26,56 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.0.6.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
+        <!-- WEB -->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.0.6.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
+            <version>${javax.servlet-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+
+
+        <!-- DATABASE -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-entitymanager.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${commons-dbcp2.version}</version>
         </dependency>
 
     </dependencies>
