@@ -15,7 +15,6 @@
         <hibernate-entitymanager.version>5.3.1.Final</hibernate-entitymanager.version>
         <postgresql.version>42.2.2</postgresql.version>
         <commons-dbcp2.version>2.3.0</commons-dbcp2.version>
-        <jta.version>1.1</jta.version>
         <jackson-databind.version>2.9.5</jackson-databind.version>
     </properties>
     <packaging>war</packaging>
@@ -79,4 +78,18 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

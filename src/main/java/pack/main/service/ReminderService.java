@@ -2,7 +2,6 @@ package pack.main.service;
 
 
 import pack.main.entity.Remind;
-
 import java.util.List;
 
 public interface ReminderService {
